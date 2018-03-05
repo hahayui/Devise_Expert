@@ -1,33 +1,32 @@
-$(document).ready(function(){
-    $.get('https://api.coindesk.com/v1/bpi/currentprice/BGN.json', function(data, status){
+$(document).ready(function() {
+    var url = 'https://www.bitstamp.net/api/v2/ticker_hour/btceur/';
+    setInterval(function() {
+
+    }, 3000);
+    $.get(url, function(data, status) {
+
         console.log('Status:', status);
-        console.log('Data:', data);
-        
-    });
-});//on document ready
+        console.log('data:', data);
+        var fixBNB = 1.95583;
+
+        var btc = data.last;
+        var btcInBGN = btc * fixBNB;
+        console.log(Math.round(btcInBGN * 100) / 100);
+        var section = document.querySelector('#template');
+        var myArticle = document.createElement('article');
+        var H1 = document.createElement('h1');
+        myArticle.appendChild(H1);
+
+        H1.textContent = Math.round(btcInBGN * 100) / 100 + " лв."; //rounded to the second dec
+        section.appendChild(myArticle);
+        /*setInterval(function() {
+          btcInBGN.
+            //$('h1').load(url)
+        }, 2000);*/
 
 
 
+    }); //function closing
 
 
-
-/*
-       $(document).ready(function(){
-          var imgPath = './pics-large/';
-          $.get('./images.json', function(data,status){
-            console.log('Status:', status);
-            console.log('data:',data);
-            $('#title').html(data.title);
-            $.each( data.items, function(index,item){
-              var sectionHTML = $('#template').html();
-              var section = $(sectionHTML).clone();
-              
-              section.find('h2').html(item.title);
-              section.find('p').html(item.shortinfo);
-              section.find('footer a:nth-child(2)').attr('href',item.url);
-              $('#main').append(section);
-
-            });//for each item in data.items
-          });//get images 
-       });//on document ready
-*/
+}); //on document ready
