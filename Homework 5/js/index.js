@@ -1,10 +1,11 @@
 $(document).ready(function() {
-
-
+    var srcImg;
+    var btcTmp = 0;
+    //var btcTmpForSecondReload = 0;
+    console.log(btcTmp);
     /*FUNCTION THAT SHOWS THE INFORMATION IN THE INDEX.HTML FILE ABOUT BTCS RATE*/
     function print(stoinost, imgSrc) {
         $("#template p").text("1 BTC = " + valueFinal);
-
         $("#template img").attr("src", imgSrc);
     } /*CLOSING "print" FUNCTION */
 
@@ -18,10 +19,11 @@ $(document).ready(function() {
             console.log('Status:', status);
             console.log('data:', data);
             var btc = data.last; /*GETTING THE LAST VALUE FOR 1BTC*/
-            var btcTMP = btc; /* TRANSFERING THE VALUE OF 1BTC TO TEMPORARY VARIABLE TO MAKE COMAPRISOON BETWEEN THEM*/
-            if (btcTMP != btc) { /*DOING A COMAPRISON BETWEEN THE 2 VARIABLES AND TAKE THE CORRESPONDING RESULT*/
-                //console.log(btcTMP);
-                var btcInBGN = btcTMP * fixBNB;
+            btcTmp = btc; /* TRANSFERING THE VALUE OF 1BTC TO TEMPORARY VARIABLE TO MAKE COMAPRISOON BETWEEN THEM*/
+            console.log(Number(btcTmp));
+            if (btcTmp != btc) { /*DOING A COMAPRISON BETWEEN THE 2 VARIABLES AND TAKE THE CORRESPONDING RESULT*/
+                //console.log(btcTmp);
+                var btcInBGN = btcTmp * fixBNB;
                 //console.log(btcInBGN);
             } else {
                 //console.log(btc);
@@ -29,10 +31,11 @@ $(document).ready(function() {
                 //console.log(btcInBGN);
             }
 
+
             valueFinal = ((btcInBGN).toFixed(2)) + " лв.";
             //console.log(valueFinal);
-            var srcIMG = "../images/arrow-up.png";
-            print(valueFinal, srcIMG);
+
+            print(valueFinal, srcImg);
 
         });
     }; /*CLOSING "reload" function*/
@@ -44,11 +47,21 @@ $(document).ready(function() {
             var fixBNB = 1.95583; /*EUR IN BGN - INFO FROM BNB*/
             console.log('Status:', status);
             console.log('data:', data);
+
             var btc = data.last; /*GETTING THE LAST VALUE FOR 1BTC*/
-            var btcTMP = btc; /* TRANSFERING THE VALUE OF 1BTC TO TEMPORARY VARIABLE TO MAKE COMAPRISOON BETWEEN THEM*/
-            if (btcTMP != btc) { /*DOING A COMAPRISON BETWEEN THE 2 VARIABLES AND TAKE THE CORRESPONDING RESULT*/
-                //console.log(btcTMP);
-                var btcInBGN = btcTMP * fixBNB;
+            var valueBtc = Number(btc);
+            console.log(valueBtc);
+            console.log(btcTmp);
+
+
+            var btcTmp1 = btc; /* TRANSFERING THE VALUE OF 1BTC TO TEMPORARY VARIABLE TO MAKE COMAPRISOON BETWEEN THEM*/
+            valueBtcTmp = Number(btcTmp1);
+
+
+
+            if (btcTmp1 != btc) { /*DOING A COMAPRISON BETWEEN THE 2 VARIABLES AND TAKE THE CORRESPONDING RESULT*/
+                //console.log(btcTmp);
+                var btcInBGN = btcTmp1 * fixBNB;
                 //console.log(btcInBGN);
             } else {
                 //console.log(btc);
@@ -56,12 +69,25 @@ $(document).ready(function() {
                 //console.log(btcInBGN);
             }
 
+            if (btc < btcTmp) {
+                //console.log(btc < btcTmp);
+                srcImg = './images/down-arrow.png';
+            } else if (btc > btcTmp) {
+                srcImg = './images/up-arrow.png';
+
+            } else if (btc == btcTmp) {
+                srcImg = './images/minus.png';
+            }
             valueFinal = ((btcInBGN).toFixed(2)) + " лв.";
+
+            print(valueFinal, srcImg);
+            btcTmp = btcTmp1;
+            btcTmp1 = 0;
             //console.log(valueFinal);
-            print(valueFinal);
+            //print(valueFinal, srcImg);
 
         });
     };
 
     setInterval(reloadSecondURL, 15000); //RELOADING ON EVERY 15 SEC THE FUNCTION WITH UPDATED DATA 
-}); //ON DOCUMENT READY
+}); //CLOSING ON DOCUMENT READY
