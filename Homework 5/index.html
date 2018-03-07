@@ -1,9 +1,9 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="./images/bitcoin.png">
@@ -55,36 +55,78 @@
     <!-- PAGE CONTENT -->
 
     <div class="container-fluid">
-        <div class="row" id="main">
-            <!--MAIN ROW-->
-            <!-- INTRO -->
-            <div class="col-lg-4 text-white">
-                <h1 class="mt-5">Биткойн</h1>
-                <p class="">През 2009 г. се ражда Биткойн мрежата с пускането на първия клиент на биткойн с отворен код и издаването на първите биткойни. Първоначално биткойн цените се определят от хората в биткойн форумите. Най-сериозната сделка по това време е
-                    за пица на стойност 10 000 биткойна.</p>
-            </div>
-            <!-- CLOSING INTRO -->
+        <!--FIRST ROW-->
+        <div class="row mt-3">
+            <button class="btn btn-lg btn-block btn-outline-light rounded-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 
-            <div id="template" class="col-lg-8 text-white">
-                <p>
-                    <!-- HERE COMES THE BTC RATE FROM THE JS FILE -->
-                </p>
-                <img class="img-fluid">
-            </div>
+                <div class="row text-align-center">
 
+                    <div id="p" class="col-sm-12 col-md-8">
+                        <p class="h1">
+                            <!-- HERE COMES THE BTC RATE FROM THE JS FILE -->
+                        </p>
+                    </div>
+
+                    <div class="col-sm-12 col-md-4">
+                        <img id="img" class="img-fluid" src="">
+                    </div>
+
+                </div>
+            </button>
         </div>
+        <!-- FIRST ROW -->
 
+        <!-- SECOND ROW -->
+        <div class="row">
+            <!-- COLLAPSE -->
+            <div class="col-sm-12 collapse text-white" id="collapseExample">
+                <div class="row">
+                    <p class="col-sm-12 col-md-6 col-lg-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea porro nemo voluptatum vol uptas accusantium fuga dolorum explicabo. Molestiae sint dicta facere enim amet. Dele niti repellendus a optio blanditiis illum ipsa!
+                    </p>
+                    <p class="col-sm-12 col-md-6 col-lg-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea porro nemo voluptatum vol uptas accusantium fuga dolorum explicabo. Molestiae sint dicta facere enim amet. Dele niti repellendus a optio blanditiis illum ipsa!
+                    </p>
+                    <p class="col-sm-12 col-md-12 col-lg-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea porro nemo voluptatum vol uptas accusantium fuga dolorum explicabo. Molestiae sint dicta facere enim amet. Dele niti repellendus a optio blanditiis illum ipsa!
+                    </p>
+                </div>
+            </div>
+
+            <!--CLOSING COLLAPSE -->
+        </div>
+        <!-- SECOND ROW -->
+
+        <!-- THIRD ROW -->
+        <div class="row mt-5">
+            <div class="col-sm-12 col-md-6 text-white">
+                <!-- COLLAPSE -->
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea porro nemo voluptatum vol uptas accusantium fuga dolorum explicabo. Molestiae sint dicta facere enim amet. Dele niti repellendus a optio blanditiis illum ipsa! Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Sit excepturi a similique harum rem nam reprehenderit ab eligendi alias numquam enim quaerat explicabo voluptates, incidunt itaque! Molestias asperiores doloremque exercitationem. Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit. Qui illo atque dignissimos tempore quisquam dolorum ratione eligendi animi deleniti fugiat, nulla dolorem eveniet totam vitae, a dolores omnis veritatis. Iure.
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-6 text-white">
+                <!-- COLLAPSE -->
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea porro nemo voluptatum vol uptas accusantium fuga dolorum explicabo. Molestiae sint dicta facere enim amet. Dele niti repellendus a optio blanditiis illum ipsa! Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Sit excepturi a similique harum rem nam reprehenderit ab eligendi alias numquam enim quaerat explicabo voluptates, incidunt itaque! Molestias asperiores doloremque exercitationem. Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit. Qui illo atque dignissimos tempore quisquam dolorum ratione eligendi animi deleniti fugiat, nulla dolorem eveniet totam vitae, a dolores omnis veritatis. Iure.
+                </p>
+            </div>
+        </div>
+        <!-- THIRD ROW -->
     </div>
+
+    <!-- MAIN CONTAINER -->
+
+
 
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="./js/index.js">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin=" anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script src="./js/index.js ">
     </script>
 
 </body>

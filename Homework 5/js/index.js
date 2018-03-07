@@ -5,8 +5,8 @@ $(document).ready(function() {
     console.log(btcTmp);
     /*FUNCTION THAT SHOWS THE INFORMATION IN THE INDEX.HTML FILE ABOUT BTCS RATE*/
     function print(stoinost, imgSrc) {
-        $("#template p").text("1 BTC = " + valueFinal);
-        $("#template img").attr("src", imgSrc);
+        $("#p p").text("1 BTC = " + valueFinal);
+        $("#img").attr("src", imgSrc);
     } /*CLOSING "print" FUNCTION */
 
     /*FUNCTION THAT LOADS FROM EXTERNAL JSON FILE THE INFO ABOUT THE RATE OF BTC IN BGN FOR FIRST TIME. 
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
             valueFinal = ((btcInBGN).toFixed(2)) + " лв.";
             //console.log(valueFinal);
-
+            srcImg = './images/minus.png';
             print(valueFinal, srcImg);
 
         });

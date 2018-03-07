@@ -1,14 +1,40 @@
-body {
-    background: url(../images/bitcoin_slideshow_1.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+html {
+    height: auto;
 }
 
-#template p {
-    font-size: 5rem;
-    /*=80px*/
-    text-align: center;
-    vertical-align: middle;
+body {
+    background-image: url('../images/bitcoin_slideshow_1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 576px) {
+    #p p {
+        font-size: 1rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #p p {
+        font-size: 2rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #p p {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    #p p {
+        font-size: 4rem;
+        text-align: center;
+        vertical-align: middle;
+    }
 }
